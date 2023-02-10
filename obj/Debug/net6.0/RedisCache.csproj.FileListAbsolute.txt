@@ -13,6 +13,7 @@ D:\Projects\RedisCache\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 D:\Projects\RedisCache\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\Projects\RedisCache\bin\Debug\net6.0\Microsoft.OpenApi.dll
 D:\Projects\RedisCache\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\RedisCache\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Projects\RedisCache\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 D:\Projects\RedisCache\bin\Debug\net6.0\StackExchange.Redis.dll
 D:\Projects\RedisCache\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -51,4 +52,3 @@ D:\Projects\RedisCache\obj\Debug\net6.0\refint\RedisCache.dll
 D:\Projects\RedisCache\obj\Debug\net6.0\RedisCache.pdb
 D:\Projects\RedisCache\obj\Debug\net6.0\RedisCache.genruntimeconfig.cache
 D:\Projects\RedisCache\obj\Debug\net6.0\ref\RedisCache.dll
-D:\Projects\RedisCache\bin\Debug\net6.0\Newtonsoft.Json.dll

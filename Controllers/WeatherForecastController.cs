@@ -8,7 +8,7 @@ namespace RedisCache.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
+    private static readonly List<string> Summaries = new()
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
@@ -26,12 +26,12 @@ public class WeatherForecastController : ControllerBase
     [Cache(100)]
     public OkObjectResult Get()
     {
-        Console.WriteLine("da vao");
-        return new OkObjectResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        int i = 0;
+        return new OkObjectResult(Summaries.Select(index => new WeatherForecast
         {
-            Date = DateTime.Now.AddDays(index),
+            Date = DateTime.Now.AddDays(i++),
             TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            Summary = Summaries[Random.Shared.Next(Summaries.Count)]
         })
         .ToArray());
     }
@@ -39,7 +39,7 @@ public class WeatherForecastController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create(string name)
     {
-        Summaries.Append<string>(name);
+       Summaries.Add(name);
 
         await  _responseCacheService.RemoveCacheResponseAsync(HttpContext.Request.Path);
 
